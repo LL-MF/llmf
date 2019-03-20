@@ -44,7 +44,7 @@
 
 访问一下admin.inc这个页面
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg)
+![](/media/gsdg43h46ghj.png)
 
 页面最底下有一个flag
 
@@ -52,17 +52,17 @@
 
 不仅如此，注意到上面有确认评论的选项，尝试确认一下评论。
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image015.png)
+![](/media/grege75kgkkgh.png)
 
 回到主页我们惊喜的发现，评论插进了主页，这里就有一个骚思路了，那就是对index文件进行包含，从而达到插入的命令以PHP语句来执行。
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image017.jpg)
+![](/media/rthrtmhcvb567d3.png)
 
 ### Flag3
 
 插入&lt;?php phpinfo\(\); ?&gt;，并且确认评论
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image019.jpg)
+![](/media/asd1das23t262.png)
 
 虽然在页面上没有看到我们插入的内容，但是我们尝试用php伪协议
 
