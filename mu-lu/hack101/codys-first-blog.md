@@ -1,16 +1,14 @@
 # Cody's First Blog
 
-
-
 运用到文件包含漏洞的使用，以及PHP伪协议的知识。
 
 ### Flag1
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
+![](/media/1dsaf1231d.png)
 
 提交评论得到第一个flag（这里提交的内容包含&lt;?php都会弹出flag）
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
+![](/media/12sa124ar13r.png)
 
 **Flag1：**
 
@@ -20,27 +18,27 @@
 
 回到首页，查看源代码发现如下注释：
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)
+![](/media/12ewd12sad1.png)
 
 &lt;a href="?page=admin.auth.inc"&gt;Admin login&lt;/a&gt;
 
 跟过去
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg)
+![](/media/qwdqw21edsag.png)
 
 是一个管理员的登录入口，先把他丢到burpsuit里面爆破，然后继续寻找线索（爆破了一个小时什么也没有，应该是烟雾弹）
 
 ### Flag2
 
-注意到：http://35.196.135.216:5001/d48c38814d/?page=admin.auth.inc
+注意到：[http://35.196.135.216:5001/d48c38814d/?page=admin.auth.inc](http://35.196.135.216:5001/d48c38814d/?page=admin.auth.inc)
 
 我们对page参数进行修改一下看看
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg)
+![](/media/eghgjt65ufg.png)
 
 显然这是一个文件包含了，那思路就逐渐清晰，先扫一波存在的文件\(分析结构应该为xx.inc.php文件，这里并不能跨目录包含，已经限制了文件包含的路径\)源代码已经强制在后面添加了.php后缀。（这里方便筛选，包含成功的不会出现字符串Warning，这一条件可以作为筛选项）
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg)
+![](/media/fafher45uhgf.png)
 
 得到的结果大概就这三个。
 
@@ -72,7 +70,7 @@
 
 PHP 带有很多内置 URL 风格的封装协议，可用于类似 fopen\(\)、 copy\(\)、 file\_exists\(\) 和 filesize\(\) 的文件系统函数。 除了这些封装协议，还能通过 stream\_wrapper\_register\(\) 来注册自定义的封装协议。
 
-https://www.cnblogs.com/lgf01010/p/9595391.html
+[https://www.cnblogs.com/lgf01010/p/9595391.html](https://www.cnblogs.com/lgf01010/p/9595391.html)
 
 **目录**
 
@@ -105,6 +103,4 @@ URL如下：
 ![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image031.jpg)
 
 自此全部完成
-
-
 
