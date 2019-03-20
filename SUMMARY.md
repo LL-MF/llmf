@@ -10,7 +10,7 @@
       * Micro-CMS v2
       * Encrypted Pastebin
       * Photo Gallery
-      * Cody's First Blog
+      * [Cody's First Blog](mu-lu/hack101/codys-first-blog.md)
       * Postbook
       * Ticketastic: Demo Instance
       * Ticketastic: Live Instance
