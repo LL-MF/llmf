@@ -5,4 +5,17 @@
   * [靶机渗透](mu-lu/ba-ji-shen-tou.md)
   * CTF-Writeup
     * [Hack101 ](mu-lu/hack101.md)
+      * A little something to get you started    
+      * Micro-CMS v1
+      * Micro-CMS v2
+      * Encrypted Pastebin
+      * Photo Gallery
+      * Cody's First Blog
+      * Postbook
+      * Ticketastic: Demo Instance
+      * Ticketastic: Live Instance
+      * Petshop Pro
+      * Model E1337 - Rolling Code Lock
+      * TempImage
+      * H1 Thermostat
 
