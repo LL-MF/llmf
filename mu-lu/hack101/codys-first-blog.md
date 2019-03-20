@@ -74,11 +74,11 @@ PHP 带有很多内置 URL 风格的封装协议，可用于类似 fopen\(\)、 
 
 **目录**
 
-[![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image021.jpg "目录")](http://image.3001.net/images/20180827/1535362079_5b83c41fbe910.png)
+[![](/media/fasf1ff1fsg.jpg "目录")](http://image.3001.net/images/20180827/1535362079_5b83c41fbe910.png)
 
 URL如下：
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image023.jpg)
+![](/media/fsdaf2fdsy32.png)
 
 我们惊喜的发现，插入的PHP代码被解析并且执行了。
 
@@ -88,19 +88,19 @@ URL如下：
 
 前往admin.inc确认评论
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image025.jpg)
+![](/media/3rfdsg3hgffh.png)
 
 然后直接用菜刀连接
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image027.jpg)
+![](/media/asf1dsa112.png)
 
 最后一个flag在index.php注释里面
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image029.jpg)
+![](/media/qwasf2t32dsf.png)
 
 ^FLAG^7c0e45cb6dbb53a134e5627e432a2a660192cdf3fe1dcf5e06b91886594e35e4$FLAG$
 
-![](file:///C:/Users/LLMF/AppData/Local/Temp/msohtmlclip1/01/clip_image031.jpg)
+![](/media/asff1231hk76.png)
 
 自此全部完成
 
