@@ -1,21 +1,25 @@
-# Table of contents
+# Summary
 
 * [前言](README.md)
-* [目录](mu-lu/README.md)
+* [目录](mu-lu.md)
   * [靶机渗透](mu-lu/ba-ji-shen-tou.md)
-  * [CTF-Writeup](mu-lu/ctf-writeup/README.md)
-    * [Hack101](mu-lu/ctf-writeup/hack101/README.md)
-      * [A little something to get you started](mu-lu/ctf-writeup/hack101/a-little-something-to-get-you-started.md)
-      * [Micro-CMS v1](mu-lu/ctf-writeup/hack101/micro-cms-v1.md)
-      * [Micro-CMS v2](mu-lu/ctf-writeup/hack101/micro-cms-v2.md)
-      * [Encrypted Pastebin](mu-lu/ctf-writeup/hack101/encrypted-pastebin.md)
-      * [Photo Gallery](mu-lu/ctf-writeup/hack101/photo-gallery.md)
-      * [Cody's First Blog](mu-lu/ctf-writeup/hack101/codys-first-blog.md)
-      * [Postbook](mu-lu/ctf-writeup/hack101/postbook.md)
-      * [Ticketastic: Demo Instance](mu-lu/ctf-writeup/hack101/ticketastic-demo-instance.md)
-      * [Ticketastic: Live Instance](mu-lu/ctf-writeup/hack101/ticketastic-live-instance.md)
-      * [Petshop Pro](mu-lu/ctf-writeup/hack101/petshop-pro.md)
-      * [Model E1337 - Rolling Code Lock](mu-lu/ctf-writeup/hack101/model-e1337-rolling-code-lock.md)
-      * [TempImage](mu-lu/ctf-writeup/hack101/tempimage.md)
-      * [H1 Thermostat](mu-lu/ctf-writeup/hack101/h1-thermostat.md)
+  * CTF-Writeup
+    * [Hack101 ](mu-lu/hack101.md)
+      * A little something to get you started    
+      * Micro-CMS v1
+      * Micro-CMS v2
+      * Encrypted Pastebin
+      * Photo Gallery
+      * [Cody's First Blog](mu-lu/hack101/codys-first-blog.md)
+      * Postbook
+      * Ticketastic: Demo Instance
+      * Ticketastic: Live Instance
+      * Petshop Pro
+      * Model E1337 - Rolling Code Lock
+      * TempImage
+      * H1 Thermostat
+  * [工具介绍](mu-lu/gong-ju-jie-shao.md)
+    * [攻击前奏-信息收集](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji.md)
+      * [Nmap](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji/nmap.md)
+        * [一、主机发现](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji/nmap/yi-3001-zhu-ji-fa-xian.md)
 
