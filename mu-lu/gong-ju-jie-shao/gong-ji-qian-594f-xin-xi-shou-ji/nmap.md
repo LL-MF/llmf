@@ -1,4 +1,4 @@
-
+#主要参数
 
 ```
 nmap –iflist : 查看本地主机的接口信息和路由信息 -A ：选项用于使用进攻性方式扫描 -T4： 指定扫描过程使用的时序，总有6个级别（0-5），级别越高，扫描速度越快，但也容易被防火墙或IDS检测并屏蔽掉，在网络通讯状况较好的情况下推荐使用T4 -oX test.xml： 将扫描结果生成 test.xml 文件 -oG test.txt: 将扫描结果生成 test.txt 文件 -sn : 只进行主机发现，不进行端口扫描 -O : 指定Nmap进行系统版本扫描 -sV: 指定让Nmap进行服务版本扫描 -p <port ranges>: 扫描指定的端口 -sS/sT/sA/sW/sM:指定使用 TCP SYN/Connect()/ACK/Window/Maimon scans的方式来对目标主机进行扫描 -sU: 指定使用UDP扫描方式确定目标主机的UDP端口状况 -script <script name> : 指定扫描脚本 -Pn ： 不进行ping扫描 -sP : 用ping扫描判断主机是否存活，只有主机存活，nmap才会继续扫描，一般最好不加，因为有的主机会禁止ping -PI : 设置这个选项，让nmap使用真正的ping(ICMP echo请求)来扫描目标主机是否正在运行。 -iL 1.txt : 批量扫描1.txt中的目标地址 -sL: List Scan 列表扫描，仅将指定的目标的IP列举出来，不进行主机发现 -sY/sZ: 使用SCTP INIT/COOKIE-ECHO来扫描SCTP协议端口的开放的情况 -sO: 使用IP protocol 扫描确定目标机支持的协议类型
