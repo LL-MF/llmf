@@ -15,3 +15,13 @@
 --traceroute: 追踪每个路由节点 
 --------------------- 
 ```
+##当探测公网 ip时
+nmap -sn
+
+Nmap会发送四种不同类型的数据包来探测目标主机是否在线。
+```
+    1.ICMP echo request
+    2.a TCP SYN packet to port 443(https)
+    3.a TCP ACK packet to port 80(http)
+    4.an ICMP timestamp request
+```
