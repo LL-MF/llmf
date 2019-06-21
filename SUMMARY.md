@@ -21,4 +21,5 @@
   * [工具介绍](mu-lu/gong-ju-jie-shao.md)
     * [攻击前奏-信息收集](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji.md)
       * [Nmap](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji/nmap.md)
+        * [一、主机发现](mu-lu/gong-ju-jie-shao/gong-ji-qian-594f-xin-xi-shou-ji/nmap/yi-3001-zhu-ji-fa-xian.md)
 
