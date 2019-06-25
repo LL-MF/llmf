@@ -53,7 +53,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 ##1.1尝试使用SQL注入
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
-使用sqlmap进行fuzz，但是没有成功
+尝试使用sqlmap进行fuzz，但是没有成功
 
 ```
 dirb http://192.168.1.7/ /usr/share/dirb/wordlists/big.txt 
