@@ -1,4 +1,4 @@
-[https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
+端口[https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
 This Virtual machine is using ubuntu \(32 bit\)
 
@@ -177,7 +177,7 @@ if (mysqli_connect_errno())
 用户名：billu  
 密码：b0x\_billu  
 数据库名：ica\_lab
-但是这里有一个问题就是对服务器的端口扫描结果中mysql
+但是这里有一个问题就是对服务器的端口扫描结果中mysql3306并未打开
 ### 3.1.3审计/etc/passwd
 ```go
 root:x:0:0:root:/root:/bin/bash
