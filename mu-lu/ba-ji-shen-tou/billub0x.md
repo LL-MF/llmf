@@ -206,4 +206,5 @@ landscape:x:105:110::/var/lib/landscape:/bin/false
 sshd:x:106:65534::/var/run/sshd:/usr/sbin/nologin
 ica:x:1000:1000:ica,,,:/home/ica:/bin/bash
 ```
-从
+从/etc/passwd中可以得到可用于SSH登陆的用户名
+root
