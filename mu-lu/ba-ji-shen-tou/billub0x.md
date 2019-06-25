@@ -212,4 +212,4 @@ root
 ica
 该线索可用于爆破
 ### 3.1.4审计in.php
-访问in.php得到的是phpinfo页面
+访问in.php得到的是phpinfo页面，从phpinfo页面获得如下信息
