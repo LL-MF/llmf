@@ -1,5 +1,4 @@
 
-
 [https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
 This Virtual machine is using ubuntu \(32 bit\)
