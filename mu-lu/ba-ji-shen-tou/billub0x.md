@@ -91,41 +91,7 @@ GENERATED WORDS: 20458
 + http://192.168.1.7/phpmy/LICENSE (CODE:200|SIZE:18011)                                                              
 + http://192.168.1.7/phpmy/README (CODE:200|SIZE:2164)                                                                
 + http://192.168.1.7/phpmy/TODO (CODE:200|SIZE:190)                                                                   
-+ http://192.168.1.7/phpmy/changelog (CODE:200|SIZE:8367)                                                             
-==> DIRECTORY: http://192.168.1.7/phpmy/contrib/                                                                      
-+ http://192.168.1.7/phpmy/docs (CODE:200|SIZE:2781)                                                                  
-+ http://192.168.1.7/phpmy/export (CODE:200|SIZE:8367)                                                                
-+ http://192.168.1.7/phpmy/favicon (CODE:200|SIZE:18902)                                                              
-+ http://192.168.1.7/phpmy/favicon.ico (CODE:200|SIZE:18902)                                                          
-+ http://192.168.1.7/phpmy/import (CODE:200|SIZE:8367)                                                                
-+ http://192.168.1.7/phpmy/index (CODE:200|SIZE:8367)                                                                 
-==> DIRECTORY: http://192.168.1.7/phpmy/js/                                                                           
-==> DIRECTORY: http://192.168.1.7/phpmy/libraries/                                                                    
-+ http://192.168.1.7/phpmy/license (CODE:200|SIZE:8367)                                                               
-==> DIRECTORY: http://192.168.1.7/phpmy/locale/                                                                       
-+ http://192.168.1.7/phpmy/main (CODE:200|SIZE:8367)                                                                  
-+ http://192.168.1.7/phpmy/navigation (CODE:200|SIZE:8367)                                                            
-+ http://192.168.1.7/phpmy/phpinfo (CODE:200|SIZE:8367)                                                               
-+ http://192.168.1.7/phpmy/phpmyadmin (CODE:200|SIZE:42380)                                                           
-==> DIRECTORY: http://192.168.1.7/phpmy/pmd/                                                                          
-+ http://192.168.1.7/phpmy/print (CODE:200|SIZE:1064)                                                                 
-+ http://192.168.1.7/phpmy/robots (CODE:200|SIZE:26)                                                                  
-+ http://192.168.1.7/phpmy/robots.txt (CODE:200|SIZE:26)                                                              
-==> DIRECTORY: http://192.168.1.7/phpmy/scripts/                                                                      
-==> DIRECTORY: http://192.168.1.7/phpmy/setup/                                                                        
-+ http://192.168.1.7/phpmy/sql (CODE:200|SIZE:8367)                                                                   
-==> DIRECTORY: http://192.168.1.7/phpmy/themes/                                                                       
-+ http://192.168.1.7/phpmy/url (CODE:200|SIZE:8367)                                                                   
-+ http://192.168.1.7/phpmy/webapp (CODE:200|SIZE:6914)                                                                
-                                                                                                                  
----- Entering directory: http://192.168.1.7/phpmy/setup/ ----
-+ http://192.168.1.7/phpmy/setup/config (CODE:303|SIZE:0)                                                             
-==> DIRECTORY: http://192.168.1.7/phpmy/setup/frames/                                                                 
-+ http://192.168.1.7/phpmy/setup/index (CODE:200|SIZE:12967)                                                          
-==> DIRECTORY: http://192.168.1.7/phpmy/setup/lib/                                                                    
-+ http://192.168.1.7/phpmy/setup/scripts (CODE:200|SIZE:5169)                                                         
-+ http://192.168.1.7/phpmy/setup/styles (CODE:200|SIZE:6941)                                                          
-+ http://192.168.1.7/phpmy/setup/validate (CODE:200|SIZE:10)                                                                                                             
++ http://192.168.1.7/phpmy/changelog (CODE:200|SIZE:8367)                                                                                                                                                             
 -----------------
 END_TIME: Tue Jun 25 11:45:52 2019
 DOWNLOADED: 61374 - FOUND: 37
