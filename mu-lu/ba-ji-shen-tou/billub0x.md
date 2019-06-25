@@ -111,10 +111,13 @@ DOWNLOADED: 61374 - FOUND: 37
 得到/add、/c、/in、/panel、/show、/test、/phpmy等目录  
 访问192.168.1.7/test得到提示
 
-![](/media/TIM截图20190625153845.png)
+![](/media/TIM截图20190625153845.png)  
 分析得到存在一个任意文件下载漏洞
 
 # 3.任意文件下载利用
-提交URL http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空
+
+提交URL [http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空](http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空)  
 尝试将file以post请求提交
+
+![](/media/TIM截图20190625162642.png)
 
