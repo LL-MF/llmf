@@ -177,7 +177,7 @@ if (mysqli_connect_errno())
 用户名：billu  
 密码：b0x\_billu  
 数据库名：ica\_lab
-但是这里有一个问题就是对服务器的端口扫描结果中mysql3306并未打开
+但是这里有一个问题就是对服务器的端口扫描结果中mysql对应端口3306并未打开，怀疑mysql服务并未正常开启
 ### 3.1.3审计/etc/passwd
 ```go
 root:x:0:0:root:/root:/bin/bash
