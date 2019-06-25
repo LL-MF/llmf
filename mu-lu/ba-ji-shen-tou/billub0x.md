@@ -22,6 +22,8 @@ Enjoy the machine
 
 # 1.信息收集
 
+##1.1IP发现
+
 首先需要找到靶机IP，使用Nmap
 
 `nmap -sn 192.168.1.0/24`
@@ -50,13 +52,19 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 4.手动挖掘：使用burp对各个页面进行分析，找出新漏洞
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
+
 ---
-##1.1尝试使用SQL注入
+
+## 1.1尝试使用SQL注入
+
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
 尝试使用sqlmap进行fuzz，但是没有成功，把他先放一放，先把目光转移到其他地方
-##1.2爆破目录
+
+## 1.2爆破目录
+
 使用kali自带的目录爆破工具dirb对目录进行枚举
+
 ```
 dirb http://192.168.1.7/ /usr/share/dirb/wordlists/big.txt 
 
@@ -87,7 +95,7 @@ GENERATED WORDS: 20458
 + http://192.168.1.7/show (CODE:200|SIZE:1)                                                                           
 + http://192.168.1.7/test (CODE:200|SIZE:72)                                                                          
 ==> DIRECTORY: http://192.168.1.7/uploaded_images/                                                                    
-                                                                                                                                                                                       
+
 ---- Entering directory: http://192.168.1.7/phpmy/ ----
 + http://192.168.1.7/phpmy/ChangeLog (CODE:200|SIZE:28878)                                                            
 + http://192.168.1.7/phpmy/LICENSE (CODE:200|SIZE:18011)                                                              
@@ -97,7 +105,8 @@ GENERATED WORDS: 20458
 -----------------
 END_TIME: Tue Jun 25 11:45:52 2019
 DOWNLOADED: 61374 - FOUND: 37
-
 ```
-得到/add、/c、/in、/panel、/show、/test、/phpmy等目录
+
+得到/add、/c、/in、/panel、/show、/test、/phpmy等目录  
 访问192.168.1.7/test得到提示
+
