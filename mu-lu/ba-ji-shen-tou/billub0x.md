@@ -383,5 +383,5 @@ echo "<font size=5 face=\"comic sans ms\" style=\"left: 0;bottom: 0; position: a
 
 ?>
 ```
-从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str_replace寻找单引号并将单引号替换成空
+从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str_replace()函数寻找单引号并将单引号替换成空
 
