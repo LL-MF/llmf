@@ -136,8 +136,26 @@ DOWNLOADED: 61374 - FOUND: 37
 add.php是一个上传界面，但是经过对add.php的源码审计发现，这个上传页面并不具有后台处理上传数据的功能，因此是不具有像服务器上传文件的功能的，这里应该是一个烟雾弹
 
 ### 3.1.2审计c.php
+```php
+<?php
+#header( 'Z-Powered-By:its chutiyapa xD' );
+header('X-Frame-Options: SAMEORIGIN');
+header( 'Server:testing only' );
+header( 'X-Powered-By:testing only' );
 
-![](/media/c.php.png)这是一个数据库连接文件，这里记录了数据库的账号密码
+ini_set( 'session.cookie_httponly', 1 );
+
+$conn = mysqli_connect("127.0.0.1","billu","b0x_billu","ica_lab");
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "connection failed ->  " . mysqli_connect_error();
+  }
+
+?>
+
+```
 
 用户名：billu
 密码：b0x_billu
