@@ -173,7 +173,7 @@ if (mysqli_connect_errno())
   }
 ?>
 ```
-
+从源码可以得到
 用户名：billu  
 密码：b0x\_billu  
 数据库名：ica\_lab
