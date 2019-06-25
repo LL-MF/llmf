@@ -98,4 +98,4 @@ END_TIME: Tue Jun 25 11:45:52 2019
 DOWNLOADED: 61374 - FOUND: 37
 
 ```
-得到
+得到/add、/c、/in、/panel、/show、/test、/phpmy等目录
