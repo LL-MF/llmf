@@ -177,6 +177,7 @@ if (mysqli_connect_errno())
 用户名：billu  
 密码：b0x\_billu  
 数据库名：ica\_lab
+但是这里有一个问题就是对服务器的端口扫描结果中mysql
 ### 3.1.3审计/etc/passwd
 ```go
 root:x:0:0:root:/root:/bin/bash
@@ -209,3 +210,5 @@ ica:x:1000:1000:ica,,,:/home/ica:/bin/bash
 从/etc/passwd中可以得到可用于SSH登陆的用户名
 root
 ica
+该线索可用于爆破
+### 3.1.4审计
