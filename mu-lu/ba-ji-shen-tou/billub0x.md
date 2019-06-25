@@ -137,5 +137,5 @@ add.php是一个上传界面，但是经过对add.php的源码审计发现，这
 
 ### 3.1.2审计c.php
 
-
+![](/media/c.php.png)
 
