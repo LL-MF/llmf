@@ -22,4 +22,5 @@ Enjoy the machine
 
 #信息收集
 
-
+首先需要找到靶机IP，使用Nmap
+`nmap -sn 192.168.1.0/24`
