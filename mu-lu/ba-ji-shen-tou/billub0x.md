@@ -156,6 +156,7 @@ echo '<form  method="post" enctype="multipart/form-data">
 c.php是数据库连接文件，源码如下
 
 ```php
+
 <?php
 #header( 'Z-Powered-By:its chutiyapa xD' );
 header('X-Frame-Options: SAMEORIGIN');
@@ -173,6 +174,7 @@ if (mysqli_connect_errno())
   }
 
 ?>
+
 ```
 
 用户名：billu  
