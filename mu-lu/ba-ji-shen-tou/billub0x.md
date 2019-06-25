@@ -55,7 +55,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 
 ---
 
-# 1.1尝试使用SQL注入
+##2.2尝试使用SQL注入
 
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
