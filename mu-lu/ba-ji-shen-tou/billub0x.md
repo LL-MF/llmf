@@ -22,7 +22,7 @@ Enjoy the machine
 
 # 1.信息收集
 
-##1.1IP及服务发现
+##IP及服务发现
 
 首先需要找到靶机IP，使用Nmap
 
@@ -35,15 +35,15 @@ Nmap scan report for 192.168.1.7
 Host is up (0.00017s latency).
 Not shown: 998 closed ports
 PORT   STATE SERVICE
-22/tcp open  ssh
+22/tcp open  ssh 
 80/tcp open  http
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
-
+#2.漏洞挖掘
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
 ![](/media/TIM截图20190625111411.png)  
-##1.2漏洞挖掘思路：
+##2.1漏洞挖掘思路
 
 ```markdown
 1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
@@ -55,7 +55,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 
 ---
 
-## 1.1尝试使用SQL注入
+# 1.1尝试使用SQL注入
 
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
