@@ -213,3 +213,7 @@ ica
 该线索可用于爆破
 ### 3.1.4审计in.php
 访问in.php得到的是phpinfo页面，从phpinfo页面获得如下信息
+```go
+1.网站绝对路径/etc/php5/apache2filter  //可用于写shell等
+
+```
