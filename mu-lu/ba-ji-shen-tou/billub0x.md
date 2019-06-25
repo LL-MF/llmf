@@ -66,7 +66,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 
 使用kali自带的目录爆破工具dirb对目录进行枚举
 
-```
+```go
 dirb http://192.168.1.7/ /usr/share/dirb/wordlists/big.txt 
 
 -----------------
