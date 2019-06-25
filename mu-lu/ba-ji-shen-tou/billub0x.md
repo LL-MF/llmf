@@ -132,10 +132,25 @@ DOWNLOADED: 61374 - FOUND: 37
 
 ### 3.1.1审计add.php
 
-![](/media/add.php.png)  
-add.php是一个上传界面，但是经过对add.php的源码审计发现，这个上传页面并不具有后台处理上传数据的功能，因此是不具有像服务器上传文件的功能的，这里应该是一个烟雾弹
+add.php是一个上传界面
+```php
+<?php
+
+echo '<form  method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name=image>
+	<input type=text name=name value="name">
+	<input type=text name=address value="address">
+	<input type=text name=id value=1337 >
+    <input type="submit" value="upload" name="upload">
+</form>';
+
+?>
+```
+但是经过对add.php的源码审计发现，这个上传页面并不具有后台处理上传数据的功能，因此是不具有像服务器上传文件的功能的，这里应该是一个烟雾弹
 
 ### 3.1.2审计c.php
+
 ```php
 <?php
 #header( 'Z-Powered-By:its chutiyapa xD' );
@@ -154,10 +169,9 @@ if (mysqli_connect_errno())
   }
 
 ?>
-
 ```
 
-用户名：billu
-密码：b0x_billu
-数据库名：ica_lab
+用户名：billu  
+密码：b0x\_billu  
+数据库名：ica\_lab
 
