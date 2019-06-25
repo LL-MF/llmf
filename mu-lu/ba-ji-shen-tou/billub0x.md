@@ -115,4 +115,6 @@ DOWNLOADED: 61374 - FOUND: 37
 分析得到存在一个任意文件下载漏洞
 
 # 3.任意文件下载利用
+提交URL http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空
+尝试将file以post请求提交
 
