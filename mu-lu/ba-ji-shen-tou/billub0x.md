@@ -208,3 +208,4 @@ ica:x:1000:1000:ica,,,:/home/ica:/bin/bash
 ```
 从/etc/passwd中可以得到可用于SSH登陆的用户名
 root
+ica
