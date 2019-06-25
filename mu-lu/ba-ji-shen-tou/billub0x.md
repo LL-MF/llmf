@@ -114,13 +114,14 @@ DOWNLOADED: 61374 - FOUND: 37
 ![](/media/TIM截图20190625153845.png)  
 分析得到存在一个任意文件下载漏洞
 
+---
+
 # 3.任意文件下载漏洞利用
 
 （1）提交URL [http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空](http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空)  
 （2）尝试将file以post请求提交
 
-![](/media/TIM截图20190625162642.png)  
-
+![](/media/TIM截图20190625162642.png)
 
 成功下载到/etc/passwd文件  
 （3）利用任意文件下载漏洞下载add.php、c.php、in.php、show.php、panel.php等其他文件
@@ -131,7 +132,10 @@ DOWNLOADED: 61374 - FOUND: 37
 
 ### 3.1.1审计add.php
 
-![](/media/add.php.png)
+![](/media/add.php.png)  
 add.php是一个上传界面，但是经过对add.php的源码审计发现，这个上传页面并不具有后台处理上传数据的功能，因此是不具有像服务器上传文件的功能的，这里应该是一个烟雾弹
+
 ### 3.1.2审计c.php
+
+
 
