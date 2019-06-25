@@ -120,4 +120,4 @@ DOWNLOADED: 61374 - FOUND: 37
 尝试将file以post请求提交
 
 ![](/media/TIM截图20190625162642.png)
-
+成功下载
