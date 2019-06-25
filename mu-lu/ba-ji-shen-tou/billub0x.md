@@ -39,6 +39,8 @@ PORT   STATE SERVICE
 80/tcp open  http
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
+---
+
 #2.漏洞挖掘
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
@@ -52,8 +54,6 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 4.手动挖掘：使用burp对各个页面进行分析，找出新漏洞
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
-
----
 
 ##2.2尝试使用SQL注入
 
