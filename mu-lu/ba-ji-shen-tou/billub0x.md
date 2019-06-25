@@ -22,9 +22,12 @@ Enjoy the machine
 
 # 信息收集
 
-首先需要找到靶机IP，使用Nmap  
-`nmap -sn 192.168.1.0/24`  
+首先需要找到靶机IP，使用Nmap
+
+`nmap -sn 192.168.1.0/24`
+
 结果如下
+
 ```go
 Nmap scan report for 192.168.1.7
 Host is up (0.00017s latency).
@@ -34,6 +37,6 @@ PORT   STATE SERVICE
 80/tcp open  http
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
-访问
 
+访问
 
