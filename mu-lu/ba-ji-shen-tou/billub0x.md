@@ -211,4 +211,5 @@ ica:x:1000:1000:ica,,,:/home/ica:/bin/bash
 root
 ica
 该线索可用于爆破
-### 3.1.4审计
+### 3.1.4审计in.php
+访问in.php得到的是phpinfo页面
