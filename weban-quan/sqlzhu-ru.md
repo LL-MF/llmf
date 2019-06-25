@@ -8,17 +8,17 @@ SQL注入是指由于开发者未经安全处理或处理不完善，导致恶�
 
 测试步骤：
 
-（1） 加单引号，URL：www.text.com/text.php?id=3’
+（1） 加单引号，URL：www.text.com/text.php?id=3'
 
-对应的sql：select * from table where id=3’ 这时sql语句出错，程序无法正常从数据库中查询出数据，就会抛出异常；
+对应的sql：`select * from table where id=3'` 这时sql语句出错，程序无法正常从数据库中查询出数据，就会抛出异常；
 
 （2） 加and 1=1 ,URL：www.text.com/text.php?id=3 and 1=1
 
-对应的sql：select * from table where id=3’ and 1=1 语句执行正常，与原始页面如任何差异；
+对应的sql：`select * from table where id=3' and 1=1` 语句执行正常，与原始页面如任何差异；
 
 （3） 加and 1=2，URL：www.text.com/text.php?id=3 and 1=2
 
-对应的sql：select * from table where id=3 and 1=2 语句可以正常执行，但是无法查询出结果，所以返回数据与原始网页存在差异
+对应的sql：`select * from table where id=3 and 1=2` 语句可以正常执行，但是无法查询出结果，所以返回数据与原始网页存在差异
 
 如果满足以上三点，则可以判断该URL存在数字型注入。
 ##2.2字符型注入
