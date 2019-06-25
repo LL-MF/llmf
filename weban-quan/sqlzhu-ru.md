@@ -24,19 +24,19 @@ SQL注入是指由于开发者未经安全处理或处理不完善，导致恶�
 ##2.2字符型注入
 输入的参数为字符串时，称为字符型。字符型和数字型最大的一个区别在于，数字型不需要单引号来闭合，而字符串一般需要通过单引号来闭合的。
 
-例如数字型语句：select * from table where id =3
+例如数字型语句：`select * from table where id =3`
 
-则字符型如下：select * from table where name=’admin’
+则字符型如下：`select * from table where name='admin'`
 
 因此，在构造payload时通过闭合单引号可以成功执行语句：
 
 测试步骤：
 
-（1） 加单引号：select * from table where name=’admin’’
+（1） 加单引号：`select * from table where name='admin''`
 
 由于加单引号后变成三个单引号，则无法执行，程序会报错；
 
-（2） 加 ’and 1=1 此时sql 语句为：select * from table where name=’admin’ and 1=1’ ,也无法进行注入，还需要通过注释符号将其绕过；
+（2） 加 `'and 1=1` 此时sql 语句为：`select * from table where name='admin' and 1=1'` ,也无法进行注入，还需要通过注释符号将其绕过；
 
 Mysql 有三种常用注释符：
 
@@ -46,9 +46,9 @@ Mysql 有三种常用注释符：
 
 /\* \*/ 注释掉符号内的内容
 
-因此，构造语句为：select * from table where name ='admin' and 1=1-- ' 可成功执行返回结果正确；
+因此，构造语句为：`select * from table where name ='admin' and 1=1-- '` 可成功执行返回结果正确；
 
-（3） 加and 1=2— 此时sql语句为：select * from table where name=’admin’ and 1=2 –’则会报错
+（3） 加and 1=2-- 此时sql语句为：`select * from table where name='admin' and 1=2-- '`则会报错
 
 如果满足以上三点，可以判断该url为字符型注入。
 
