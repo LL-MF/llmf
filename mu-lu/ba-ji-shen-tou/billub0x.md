@@ -43,7 +43,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
 ![](/media/TIM截图20190625111411.png)  
-漏洞挖掘思路如下：
+##1.2漏洞挖掘思路：
 
 ```markdown
 1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
