@@ -116,9 +116,10 @@ DOWNLOADED: 61374 - FOUND: 37
 
 # 3.任意文件下载利用
 
-（1）提交URL [http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空](http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空)  
-尝试将file以post请求提交
+（1）提交URL http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空  
+（2）尝试将file以post请求提交
 
-![](/media/TIM截图20190625162642.png)
-成功下载到/etc/passwd文件
+![](/media/TIM截图20190625162642.png)  
+成功下载到/etc/passwd文件  
 利用任意文件下载漏洞
+
