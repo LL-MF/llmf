@@ -20,7 +20,7 @@ Enjoy the machine
 
 ---
 
-# 信息收集
+# 1.信息收集
 
 首先需要找到靶机IP，使用Nmap
 
@@ -41,8 +41,14 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
 ![](/media/TIM截图20190625111411.png)
+漏洞挖掘思路如下：
+```go
+1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
+2.爆破目录：使用dirb对站点
 
+```
 猜测是SQL注入，逐一尝试，发现均提示Try again  
 F12查看了一下元素，发现登录框是假的，无论提交什么信息都会通过js弹窗提示Try again
+
 
 
