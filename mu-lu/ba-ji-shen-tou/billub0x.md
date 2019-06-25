@@ -99,3 +99,4 @@ DOWNLOADED: 61374 - FOUND: 37
 
 ```
 得到/add、/c、/in、/panel、/show、/test、/phpmy等目录
+访问192.168.1.7/test得到提示
