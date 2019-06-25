@@ -1,4 +1,4 @@
-3\# Billu: b0x
+# Billu: b0x
 
 [https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 

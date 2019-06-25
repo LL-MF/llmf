@@ -4,7 +4,7 @@
 * [目录](mu-lu.md)
 * [vulnhub](mu-lu/ba-ji-shen-tou.md)
   * [Billu\_b0x](mu-lu/ba-ji-shen-tou/billub0x.md)
-* CTF-Writeup
+* [CTF-Writeup](ctf-writeup.md)
   * [Hack101 ](mu-lu/hack101.md)
     * A little something to get you started    
     * Micro-CMS v1
