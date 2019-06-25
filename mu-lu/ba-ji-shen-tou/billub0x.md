@@ -55,7 +55,7 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 
 尝试使用sqlmap进行fuzz，但是没有成功，把他先放一放，先把目光转移到其他地方
 ##1.2爆破目录
-使用kali自带的目录爆破工具
+使用kali自带的目录爆破工具dirb对目录进行枚举
 ```
 dirb http://192.168.1.7/ /usr/share/dirb/wordlists/big.txt 
 
