@@ -139,5 +139,7 @@ add.php是一个上传界面，但是经过对add.php的源码审计发现，这
 
 ![](/media/c.php.png)这是一个数据库连接文件，这里记录了数据库的账号密码
 
-
+用户名：billu
+密码：b0x_billu
+数据库名：ica_lab
 
