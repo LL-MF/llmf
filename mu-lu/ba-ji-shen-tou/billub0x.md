@@ -22,7 +22,7 @@ Enjoy the machine
 
 # 1.信息收集
 
-##1.1IP发现
+##1.1IP及服务发现
 
 首先需要找到靶机IP，使用Nmap
 
