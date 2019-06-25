@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [目录](mu-lu.md)
-* [靶机渗透](mu-lu/ba-ji-shen-tou.md)
+* [vulnhub](mu-lu/ba-ji-shen-tou.md)
   * [Billu\_b0x](mu-lu/ba-ji-shen-tou/billub0x.md)
 * CTF-Writeup
   * [Hack101 ](mu-lu/hack101.md)
