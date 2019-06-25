@@ -24,6 +24,7 @@ Enjoy the machine
 
 首先需要找到靶机IP，使用Nmap  
 `nmap -sn 192.168.1.0/24`
+结果如下
 ```
 Nmap scan report for 192.168.1.7
 Host is up (0.00017s latency).
