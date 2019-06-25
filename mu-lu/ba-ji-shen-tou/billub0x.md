@@ -116,14 +116,18 @@ DOWNLOADED: 61374 - FOUND: 37
 
 # 3.任意文件下载漏洞利用
 
-（1）提交URL http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空  
+（1）提交URL [http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空](http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空)  
 （2）尝试将file以post请求提交
 
 ![](/media/TIM截图20190625162642.png)  
 成功下载到/etc/passwd文件  
 （3）利用任意文件下载漏洞下载add.php、c.php、in.php、show.php、panel.php等其他文件
-##3.1 审计代码
-对已下载的代码进行审计
-###3.1.1审计add.php
 
+## 3.1 审计代码
+
+对已下载的代码进行审计
+
+### 3.1.1审计add.php
+
+![](/media/add.php.png)
 
