@@ -383,5 +383,5 @@ echo "<font size=5 face=\"comic sans ms\" style=\"left: 0;bottom: 0; position: a
 
 ?>
 ```
-从i
+从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后
 
