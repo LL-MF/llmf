@@ -1,4 +1,3 @@
-
 [https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
 This Virtual machine is using ubuntu \(32 bit\)
@@ -21,7 +20,7 @@ Enjoy the machine
 
 # 1.信息收集
 
-##IP及服务发现
+## IP及服务发现
 
 首先需要找到靶机IP，使用Nmap
 
@@ -38,13 +37,16 @@ PORT   STATE SERVICE
 80/tcp open  http
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
+
 ---
 
-#2.漏洞挖掘
+# 2.漏洞挖掘
+
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
-![](/media/TIM截图20190625111411.png)  
-##2.1漏洞挖掘思路
+![](/media/TIM截图20190625111411.png)
+
+## 2.1漏洞挖掘思路
 
 ```markdown
 1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
@@ -54,13 +56,13 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
 
-##2.2尝试使用SQL注入
+## 2.2尝试使用SQL注入
 
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
 尝试使用sqlmap进行fuzz，但是没有成功，把他先放一放，先把目光转移到其他地方
 
-##2.3爆破目录
+## 2.3爆破目录
 
 使用kali自带的目录爆破工具dirb对目录进行枚举
 
@@ -108,4 +110,6 @@ DOWNLOADED: 61374 - FOUND: 37
 
 得到/add、/c、/in、/panel、/show、/test、/phpmy等目录  
 访问192.168.1.7/test得到提示
+
+![](/media/TIM截图20190625153845.png)
 
