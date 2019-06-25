@@ -38,5 +38,5 @@ PORT   STATE SERVICE
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
 
-访问
+访问其80端口
 
