@@ -38,7 +38,7 @@ PORT   STATE SERVICE
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
 
-访问其80端口
+访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
-
+![](/media/TIM截图20190625111411.png)
 
