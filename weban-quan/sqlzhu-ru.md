@@ -46,7 +46,7 @@ Mysql 有三种常用注释符：
 
 /\* \*/ 注释掉符号内的内容
 
-因此，构造语句为：select * from table where name =’admin’ and 1=1—’ 可成功执行返回结果正确；
+因此，构造语句为：select * from table where name ='admin' and 1=1-- ' 可成功执行返回结果正确；
 
 （3） 加and 1=2— 此时sql语句为：select * from table where name=’admin’ and 1=2 –’则会报错
 
