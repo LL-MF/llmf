@@ -124,5 +124,6 @@ DOWNLOADED: 61374 - FOUND: 37
 （3）利用任意文件下载漏洞下载add.php、c.php、in.php、show.php、panel.php等其他文件
 ##3.1 审计代码
 对已下载的代码进行审计
-###
+###3.1.1审计add.php
+
 
