@@ -1,4 +1,4 @@
-3# Billu: b0x
+3\# Billu: b0x
 
 [https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
@@ -40,17 +40,18 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
-![](/media/TIM截图20190625111411.png)
+![](/media/TIM截图20190625111411.png)  
 漏洞挖掘思路如下：
-```go
+
+```markdown
 1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
 2.爆破目录：使用dirb对站点目录进行爆破，寻找其他有价值的信息
 3.漏洞扫描：使用AWVS等扫描攻击对站点进行扫描
 4.手动挖掘：使用burp对各个页面进行分析，找出新漏洞
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
-猜测是SQL注入，逐一尝试，发现均提示Try again  
+##1.1尝试使用SQL注入
+猜测是SQL注入，逐一尝试，发现js弹窗均提示Try again
+
 F12查看了一下元素，发现登录框是假的，无论提交什么信息都会通过js弹窗提示Try again
-
-
 
