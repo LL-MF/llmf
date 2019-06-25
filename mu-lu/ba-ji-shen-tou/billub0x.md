@@ -1,4 +1,4 @@
-端口[https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
+[https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
 This Virtual machine is using ubuntu \(32 bit\)
 
@@ -173,12 +173,15 @@ if (mysqli_connect_errno())
   }
 ?>
 ```
-从源码可以得到
+
+从源码可以得到  
 用户名：billu  
 密码：b0x\_billu  
-数据库名：ica\_lab
+数据库名：ica\_lab  
 但是这里有一个问题就是对服务器的端口扫描结果中mysql对应端口3306并未打开，怀疑mysql服务并未正常开启
+
 ### 3.1.3审计/etc/passwd
+
 ```go
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/bin/sh
@@ -207,13 +210,20 @@ landscape:x:105:110::/var/lib/landscape:/bin/false
 sshd:x:106:65534::/var/run/sshd:/usr/sbin/nologin
 ica:x:1000:1000:ica,,,:/home/ica:/bin/bash
 ```
-从/etc/passwd中可以得到可用于SSH登陆的用户名
-root
-ica
+
+从/etc/passwd中可以得到可用于SSH登陆的用户名  
+root  
+ica  
 该线索可用于爆破
+
 ### 3.1.4审计in.php
+
 访问in.php得到的是phpinfo页面，从phpinfo页面获得如下信息
+
 ```go
 1.网站绝对路径/etc/php5/apache2filter  #可用于写shell等
 2.
 ```
+
+
+
