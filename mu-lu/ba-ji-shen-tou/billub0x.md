@@ -51,9 +51,9 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
 ##1.1尝试使用SQL注入
-猜测是SQL注入，逐一尝试，发现js弹窗均提示Try again
+猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
-F12查看了一下元素，发现登录框是假的，无论提交什么信息都会通过js弹窗提示Try again
+使用sqlmap进行fuzz，但是没有成功
 
 ```
 dirb http://192.168.1.7/ /usr/share/dirb/wordlists/big.txt 
@@ -97,3 +97,4 @@ END_TIME: Tue Jun 25 11:45:52 2019
 DOWNLOADED: 61374 - FOUND: 37
 
 ```
+得到
