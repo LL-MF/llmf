@@ -126,7 +126,7 @@ DOWNLOADED: 61374 - FOUND: 37
 成功下载到/etc/passwd文件  
 （3）利用任意文件下载漏洞下载add.php、c.php、in.php、show.php、panel.php等其他文件
 
-## 3.1 审计代码
+## 3.1审计代码
 
 对已下载的代码进行审计
 
