@@ -364,8 +364,8 @@ if(isset($_POST['continue']))
 
 **0x00session文件包含**
 利用条件
-0x01session存放绝对路径已知
-0x02session变量可控
+1.session存放绝对路径已知
+2.session变量可控
 * 
 ### 3.1.6审计index.php
 
