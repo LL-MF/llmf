@@ -316,7 +316,7 @@ if(isset($_POST['upload']))
 ?>
 ```
 
-从源代码可以看出，panel.php是index.php登陆成功后跳转的管理界面，其中有查看、添加用户以及文件上传功能  
+从源代码可以看出，panel.php是index.php登陆成功后跳转的管理界面，其中有查看、添加图片以及文件上传功能  
 在panel.php中有这么一段代码
 
 ```php
