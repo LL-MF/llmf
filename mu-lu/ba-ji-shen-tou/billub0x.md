@@ -364,25 +364,9 @@ session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里
 3.获取webshell
 
 ### 3.1.6审计index.php
-
+关键代码如下
 ```php
 <?php
-session_start();
-
-include('c.php');
-include('head.php');
-if(@$_SESSION['logged']!=true)
-{
-    $_SESSION['logged']='';
-
-}
-
-if($_SESSION['logged']==true &&  $_SESSION['admin']!='')
-{
-
-    echo "you are logged in :)";
-    header('Location: panel.php', true, 302);
-}
 
 if(isset($_POST['login']))
 {
