@@ -222,7 +222,7 @@ ica
 
 ```go
 1.网站绝对路径/etc/php5/apache2filter  #可用于写shell等
-2.网站session存储的位置
+2.网站session存储的位置                #session.save_path
 ```
 
 ### 3.1.5审计panel.php
