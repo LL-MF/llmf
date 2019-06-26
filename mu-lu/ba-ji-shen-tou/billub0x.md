@@ -296,7 +296,6 @@ if(isset($_POST['upload']))
                               echo "Uploaded successfully ";
                               $update='insert into users(name,address,image,id) values(\''.$name.'\',\''.$address.'\',\''.$iname.'\', \''.$id.'\')'; 
                              mysqli_query($conn, $update);
-
                             }
                 }
             else
@@ -307,11 +306,8 @@ if(isset($_POST['upload']))
     else
     {
         echo "<br>only png,jpg and gif file are allowed";
-
     }
 }
-
-
 }
 
 ?>
