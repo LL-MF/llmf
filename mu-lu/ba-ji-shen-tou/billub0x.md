@@ -365,8 +365,10 @@ if(isset($_POST['continue']))
 **0x00session文件包含**
 利用条件
 1.session存放绝对路径已知
+*由于站点存在phpinfo，在session.save_path中可查看到session存放的绝对路径，这里为`/var/lib/php5/`
+*session的文件名为sess_+sessionid，sessionid可以通过
 2.session变量可控
-* 
+
 ### 3.1.6审计index.php
 
 ```php
