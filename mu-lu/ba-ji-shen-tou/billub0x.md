@@ -362,7 +362,7 @@ if(isset($_POST['continue']))
 
 #### 利用思路
 
-**一.session文件包含**
+**1.session文件包含**
 利用条件
 
 * 
