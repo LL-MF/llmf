@@ -353,9 +353,7 @@ if(isset($_POST['continue']))
 session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
 为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下
 ![](/media/session.png)  
-
 可见文件存在，满足第一个条件  
-
 2.session变量可控  
 该站点session并未找到可控session方法，待日后讨论  
 
