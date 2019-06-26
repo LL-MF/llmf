@@ -404,6 +404,6 @@ $row = mysqli_fetch_assoc($result);
 2. index.php页面SQL注入
 3. panel.php页面文件包含
 
-下面就对
+下面就对这几个漏洞利用点进行逐一分析利用
 
 
