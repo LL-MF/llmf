@@ -362,12 +362,12 @@ if(isset($_POST['continue']))
 
 #### 文件包含利用思路
 
-**0x00session文件包含**
-利用条件
-1.session存放绝对路径已知
-*由于站点存在phpinfo，在session.save_path中可查看到session存放的绝对路径，这里为`/var/lib/php5/`
-*session的文件名为sess_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`
-为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下
+**0x00session文件包含**  
+利用条件  
+1.session存放绝对路径已知  
+由于站点存在phpinfo，在session.save\_path中可查看到session存放的绝对路径，这里为`/var/lib/php5/`_  
+_session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
+为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下![](/media/session.png)
 
 2.session变量可控
 
