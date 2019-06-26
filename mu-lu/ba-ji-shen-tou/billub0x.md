@@ -328,8 +328,10 @@ if(isset($_POST['upload']))
 
 ?>
 ```
-从源代码可以看出，panel.php是index.php登陆成功后跳转的管理界面，其中有查看、添加用户以及文件上传功能
+
+从源代码可以看出，panel.php是index.php登陆成功后跳转的管理界面，其中有查看、添加用户以及文件上传功能  
 在panel.php中有这么一段代码
+
 ```php
 if(isset($_POST['continue']))
 {
@@ -355,12 +357,17 @@ if(isset($_POST['continue']))
 
 }
 ```
+
 这段代码显然是存在本地文件包含漏洞的
+
 #### 利用思路
-**1.session文件包含**
 
+**一.session文件包含**
+利用条件
 
+* 
 ### 3.1.6审计index.php
+
 ```php
 <?php
 session_start();
@@ -369,15 +376,15 @@ include('c.php');
 include('head.php');
 if(@$_SESSION['logged']!=true)
 {
-	$_SESSION['logged']='';
-	
+    $_SESSION['logged']='';
+
 }
 
 if($_SESSION['logged']==true &&  $_SESSION['admin']!='')
 {
-	
-	echo "you are logged in :)";
-	header('Location: panel.php', true, 302);
+
+    echo "you are logged in :)";
+    header('Location: panel.php', true, 302);
 }
 else
 {
@@ -391,30 +398,30 @@ Username :- <Input type=text name=un> &nbsp Password:- <input type=password name
 }
 if(isset($_POST['login']))
 {
-	$uname=str_replace('\'','',urldecode($_POST['un']));
-	$pass=str_replace('\'','',urldecode($_POST['ps']));
-	$run='select * from auth where  pass=\''.$pass.'\' and uname=\''.$uname.'\'';
-	$result = mysqli_query($conn, $run);
+    $uname=str_replace('\'','',urldecode($_POST['un']));
+    $pass=str_replace('\'','',urldecode($_POST['ps']));
+    $run='select * from auth where  pass=\''.$pass.'\' and uname=\''.$uname.'\'';
+    $result = mysqli_query($conn, $run);
 if (mysqli_num_rows($result) > 0) {
 
 $row = mysqli_fetch_assoc($result);
-	   echo "You are allowed<br>";
-	   $_SESSION['logged']=true;
-	   $_SESSION['admin']=$row['username'];
-	   
-	 header('Location: panel.php', true, 302);
-   
+       echo "You are allowed<br>";
+       $_SESSION['logged']=true;
+       $_SESSION['admin']=$row['username'];
+
+     header('Location: panel.php', true, 302);
+
 }
 else
 {
-	echo "<script>alert('Try again');</script>";
+    echo "<script>alert('Try again');</script>";
 }
-	
+
 }
 echo "<font size=5 face=\"comic sans ms\" style=\"left: 0;bottom: 0; position: absolute;margin: 0px 0px 5px;\">B0X Powered By <font color=#ff9933>Pirates</font> ";
 
 ?>
 ```
-从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str_replace()函数寻找单引号并将单引号替换成空，在这里开始考虑如何绕过限制进行注入
 
+从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str\_replace\(\)函数寻找单引号并将单引号替换成空，在这里开始考虑如何绕过限制进行注入
 
