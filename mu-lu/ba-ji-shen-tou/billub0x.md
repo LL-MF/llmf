@@ -406,7 +406,7 @@ $row = mysqli_fetch_assoc($result);
 
 下面就对这几个漏洞利用点进行逐一分析利用
 
-# 4暴力破解SSH
+# 4.暴力破解SSH
 
 ## 4.1字典收集
 
