@@ -355,10 +355,14 @@ if(isset($_POST['continue']))
 1.session存放绝对路径已知  
 由于站点存在phpinfo，在session.savepath中可查看到session存放的绝对路径，这里为/var/lib/php5/  
 session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
-为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下![](/media/session.png)  
+为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下
+![](/media/session.png)  
+
 可见文件存在，满足第一个条件  
+
 2.session变量可控  
 该站点session并未找到可控session方法，待日后讨论  
+
 **0x01其他文件包含**  
 1.利用panel.php上传图片的功能，上传一张图片马  
 2.使用文件包含漏洞包含图片使之以PHP来执行  
@@ -399,5 +403,7 @@ $row = mysqli_fetch_assoc($result);
 1. 对SSH服务进行爆破
 2. index.php页面SQL注入
 3. panel.php页面文件包含
+
+下面就对
 
 
