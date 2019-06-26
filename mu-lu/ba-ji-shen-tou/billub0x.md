@@ -368,7 +368,7 @@ if(isset($_POST['continue']))
 由于站点存在phpinfo，在session.savepath中可查看到session存放的绝对路径，这里为/var/lib/php5/  
 session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
 为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下![](/media/session.png)
-
+可见文件存在，满足第一个条件
 2.session变量可控
 
 ### 3.1.6审计index.php
