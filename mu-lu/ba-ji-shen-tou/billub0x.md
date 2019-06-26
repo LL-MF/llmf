@@ -222,6 +222,7 @@ ica
 
 ```go
 1.网站绝对路径/etc/php5/apache2filter  #可用于写shell等
+2.网站session存储的位置
 ```
 
 ### 3.1.5审计panel.php
@@ -354,7 +355,7 @@ if(isset($_POST['continue']))
 
 }
 ```
-这段代码
+这段代码显然是存在文件包含漏洞的，通过对
 
 ### 3.1.6审计index.php
 ```php
