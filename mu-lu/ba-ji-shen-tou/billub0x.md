@@ -390,6 +390,29 @@ $row = mysqli_fetch_assoc($result);
 
 从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str\_replace\(\)函数寻找单引号并将单引号替换成空，在这里开始考虑如何绕过限制进行注入
 
+### 3.1.7审计/var/www/phpmy/config.inc.php
+关键代码如下
+```php
+<?php
+
+/* Servers configuration */
+
+$cfg['Servers'][$i]['verbose'] = 'localhost';
+$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['port'] = '';
+$cfg['Servers'][$i]['socket'] = '';
+$cfg['Servers'][$i]['connect_type'] = 'tcp';
+$cfg['Servers'][$i]['extension'] = 'mysqli';
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = 'roottoor';
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+
+/* End of servers configuration */
+
+?>
+```
+
 ## 3.2审计总结
 
 经过对任意文件下载所得到的各种信息，总结出以下几个漏洞利用点
@@ -404,4 +427,4 @@ $row = mysqli_fetch_assoc($result);
 
 ## 4.1字典收集
 
-
+一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事半功倍
