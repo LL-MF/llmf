@@ -366,7 +366,7 @@ if(isset($_POST['continue']))
 利用条件
 1.session存放绝对路径已知
 *由于站点存在phpinfo，在session.save_path中可查看到session存放的绝对路径，这里为`/var/lib/php5/`
-*session的文件名为sess_+sessionid，sessionid可以通过
+*session的文件名为sess_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`
 2.session变量可控
 
 ### 3.1.6审计index.php
