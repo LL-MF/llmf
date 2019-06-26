@@ -241,26 +241,12 @@ if(@$_SESSION['logged']!=true )
 
 }
 
-
-
-echo "Welcome to billu b0x ";
-echo '<form method=post style="margin: 10px 0px 10px 95%;"><input type=submit name=lg value=Logout></form>';
 if(isset($_POST['lg']))
 {
     unset($_SESSION['logged']);
     unset($_SESSION['admin']);
     header('Location: index.php', true, 302);
 }
-echo '<hr><br>';
-
-echo '<form method=post>
-
-<select name=load>
-    <option value="show">Show Users</option>
-    <option value="add">Add User</option>
-</select> 
-
- &nbsp<input type=submit name=continue value="continue"></form><br><br>';
 if(isset($_POST['continue']))
 {
     $dir=getcwd();
