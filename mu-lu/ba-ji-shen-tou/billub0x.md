@@ -362,7 +362,7 @@ if(isset($_POST['continue']))
 
 #### 文件包含利用思路
 
-**1.session文件包含**
+**0x00session文件包含**
 利用条件
 0x01session存放绝对路径已知
 0x02session变量可控
