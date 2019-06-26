@@ -412,7 +412,8 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 ?>
 ```
-
+因为在使用dirb爆破出来的目录/phpmy/是phpmyadmin登陆界面，因此猜测其配置文件存放在默认目录
+得到口令root：roottoor
 ## 3.2审计总结
 
 经过对任意文件下载所得到的各种信息，总结出以下几个漏洞利用点
