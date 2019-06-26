@@ -437,5 +437,5 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 3. c.php
 口令billu：b0x_billu
 数据库名ica_lab
-将这些信息整合后使用john相互组合形成字典
-``
+将这些信息整合成list.txt后使用john相互组合形成字典
+`john --wordlist=list.txt --stdout --rules > wordlist.txt`
