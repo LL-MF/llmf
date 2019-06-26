@@ -328,6 +328,33 @@ if(isset($_POST['upload']))
 ?>
 ```
 从源代码可以看出，panel.php是index.php登陆成功后跳转的管理界面，其中有查看、添加用户以及文件上传功能
+在panel.php中有这么一段代码
+```php
+if(isset($_POST['continue']))
+{
+    $dir=getcwd();
+    $choice=str_replace('./','',$_POST['load']);
+
+    if($choice==='add')
+    {
+               include($dir.'/'.$choice.'.php');
+            die();
+    }
+
+        if($choice==='show')
+    {
+
+        include($dir.'/'.$choice.'.php');
+        die();
+    }
+    else
+    {
+        include($dir.'/'.$_POST['load']);
+    }
+
+}
+```
+
 ### 3.1.6审计index.php
 ```php
 <?php
