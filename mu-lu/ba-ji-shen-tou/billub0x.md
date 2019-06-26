@@ -359,7 +359,9 @@ session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里
 2.session变量可控
 该站点session并未找到可控session方法，待日后讨论
 **0x01其他文件包含**
-
+1.利用panel.php上传图片的功能，上传一张图片马
+2.使用文件包含漏洞包含图片使之以PHP来执行
+3.获取webshell
 
 ### 3.1.6审计index.php
 
