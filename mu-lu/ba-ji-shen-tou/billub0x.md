@@ -437,3 +437,4 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 3. c.php
 口令billu：b0x_billu
 数据库名ica_lab
+将这些信息
