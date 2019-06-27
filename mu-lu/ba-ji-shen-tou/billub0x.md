@@ -351,11 +351,11 @@ if(isset($_POST['continue']))
 1.session存放绝对路径已知  
 由于站点存在phpinfo，在session.savepath中可查看到session存放的绝对路径，这里为/var/lib/php5/  
 session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
-为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下
+为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下  
 ![](/media/session.png)  
 可见文件存在，满足第一个条件  
 2.session变量可控  
-该站点session并未找到可控session方法，待日后讨论  
+该站点session并未找到可控session方法，待日后讨论
 
 **0x01其他文件包含**  
 1.利用panel.php上传图片的功能，上传一张图片马  
@@ -391,7 +391,9 @@ $row = mysqli_fetch_assoc($result);
 从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str\_replace\(\)函数寻找单引号并将单引号替换成空，在这里开始考虑如何绕过限制进行注入
 
 ### 3.1.7审计/var/www/phpmy/config.inc.php
+
 关键代码如下
+
 ```php
 <?php
 
@@ -412,8 +414,10 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 ?>
 ```
-因为在使用dirb爆破出来的目录/phpmy/是phpmyadmin登陆界面，因此猜测其配置文件存放在默认目录
+
+因为在使用dirb爆破出来的目录/phpmy/是phpmyadmin登陆界面，因此猜测其配置文件存放在默认目录  
 得到口令root：roottoor
+
 ## 3.2审计总结
 
 经过对任意文件下载所得到的各种信息，总结出以下几个漏洞利用点
@@ -428,18 +432,19 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 ## 4.1字典收集
 
-一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半
-从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息
-1. /etc/passwd
-可用以登陆SSH的用户名为root|ica
-2. /var/www/phpmy/config.inc.php
-口令root：roottoor
-3. c.php
-口令billu：b0x_billu
-数据库名ica_lab
-将这些信息整合成list.txt后使用john相互组合形成字典
-`john --wordlist=list.txt --stdout --rules > wordlist.txt`
+一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半  
+从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息  
+1. /etc/passwd  
+可用以登陆SSH的用户名为root\|ica  
+2. /var/www/phpmy/config.inc.php  
+口令root：roottoor  
+3. c.php  
+口令billu：b0x\_billu  
+数据库名ica\_lab  
+将这些信息整合成list.txt后使用john相互组合形成字典  
+`john --wordlist=list.txt --stdout --rules > wordlist.txt`  
 得到wordlist.txt，部分字典内容如下
+
 ```go
 root
 ica
@@ -463,4 +468,8 @@ Root1
 .
 .
 ```
+
 使用hydra对192.168.1.7 SSH服务进行爆破`hydra -L /root/桌面/wordlist.txt -P /root/桌面/wordlist.txt -t 6 ssh://192.168.1.7 #-t将线程调低为了保证稳定性`
+
+![](/media/hydra.png)
+
