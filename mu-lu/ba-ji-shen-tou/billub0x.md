@@ -434,11 +434,11 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半  
 从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息  
-1. /etc/passwd  
+**1. /etc/passwd**  
 可用以登陆SSH的用户名为root\|ica  
-2. /var/www/phpmy/config.inc.php  
+**2. /var/www/phpmy/config.inc.php**  
 口令root：roottoor  
-3. c.php  
+**3. c.php**  
 口令billu：b0x\_billu  
 数据库名ica\_lab  
 将这些信息整合成list.txt后使用john相互组合形成字典  
