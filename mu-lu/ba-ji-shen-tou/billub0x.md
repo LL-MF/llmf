@@ -490,3 +490,4 @@ root
 根据在c.php、/var/www/phpmy/config.inc.php收集到的口令，尝试对phpmyadmin进行口令猜解
 使用root:roottoor、billu:b0x\_billu尝试登入
 使用口令billu:b0x\_billu登入成功
+## 5.2从phpmyadmin中收集信息
