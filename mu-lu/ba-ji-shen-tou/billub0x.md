@@ -481,3 +481,5 @@ root@indishell:~# whoami
 root
 ```
 至此完成挑战
+
+# 5.绕过限制进行SQL注入
