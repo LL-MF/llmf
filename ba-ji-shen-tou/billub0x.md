@@ -494,5 +494,6 @@ root
 使用在c.php、/var/www/config.inc.php收集到的口令对phpmyadmin进行口令猜解
 口令root:roottoor、billu：b0x\_billu  
 使用口令billu：b0x\_billu登入成功
+### 5.1使用phpmyadmin收集信息
 
 
