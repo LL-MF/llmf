@@ -217,7 +217,7 @@ ica
 访问in.php得到的是phpinfo页面，从phpinfo页面获得如下信息
 
 ```go
-1.网站绝对路径/etc/php5/apache2filter  #可用于写shell等
+1.网站绝对路径/var/www  #DOCUMENT_ROOT的值，可用于写shell等
 2.网站session存储的位置                #session.save_path
 ```
 
@@ -500,6 +500,7 @@ root
 ### 5.3使用phpmyadmin获取webshell
 当成功登入phpmyadmin后，会有许多方法来获取服务器的webshell
 #### 5.3.1利用phpmyadmin日志获取webshell
-
+发现登入的用户billu不具有root权限，方法无法使用
+#### 5.3.2利用
 
 
