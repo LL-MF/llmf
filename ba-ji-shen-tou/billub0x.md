@@ -501,6 +501,7 @@ root
 当成功登入phpmyadmin后，会有许多方法来获取服务器的webshell
 #### 5.3.1利用phpmyadmin日志获取webshell
 发现登入的用户billu不具有root权限，方法无法使用
-#### 5.3.2利用
+#### 5.3.2利用phpmyadmin执行SQL语句获取webshell
+
 
 
