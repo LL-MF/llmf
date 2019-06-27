@@ -488,4 +488,5 @@ root
 利用phpmyadmin可以查看其数据库数据，也可以利用SQL语句写入Webshell
 ## 5.1对phpmyadmin进行口令猜解
 根据在c.php、/var/www/phpmy/config.inc.php收集到的口令，尝试对phpmyadmin进行口令猜解
-
+使用root:roottoor、billu:b0x\_billu尝试登入
+使用口令billu:b0x\_billu登入成功
