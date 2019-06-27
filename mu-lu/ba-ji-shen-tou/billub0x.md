@@ -485,3 +485,4 @@ root
 至此完成挑战
 
 # 5.利用phpmyadmin
+## 5.1对phpmyadmin进行口令猜解
