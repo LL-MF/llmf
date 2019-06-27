@@ -487,3 +487,5 @@ root
 # 5.利用phpmyadmin
 利用phpmyadmin可以查看其数据库数据，也可以利用SQL语句写入Webshell
 ## 5.1对phpmyadmin进行口令猜解
+根据在c.php、/var/www/phpmy/config.inc.php收集到的口令，尝试对phpmyadmin进行口令猜解
+
