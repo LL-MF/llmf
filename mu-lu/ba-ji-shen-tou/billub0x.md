@@ -423,7 +423,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 经过对任意文件下载所得到的各种信息，总结出以下几个漏洞利用点
 
 1. 对SSH服务进行爆破
-2. 对phpmyadmin进行口令猜解
+2. 利用phpmyadmin
 3. 绕过限制对index.php页面进行SQL注入
 4. panel.php页面文件包含
 
