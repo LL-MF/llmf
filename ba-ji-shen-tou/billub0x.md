@@ -1,3 +1,5 @@
+# Billu\_b0x
+
 [https://www.vulnhub.com/entry/billu-b0x,188/](https://www.vulnhub.com/entry/billu-b0x,188/)
 
 This Virtual machine is using ubuntu \(32 bit\)
@@ -16,11 +18,9 @@ For any query ping me at [https://twitter.com/IndiShell1046](https://twitter.com
 
 Enjoy the machine
 
----
+## 1.信息收集
 
-# 1.信息收集
-
-## IP及服务发现
+### IP及服务发现
 
 首先需要找到靶机IP，使用Nmap
 
@@ -38,17 +38,15 @@ PORT   STATE SERVICE
 MAC Address: 00:0C:29:06:49:A0 (VMware)
 ```
 
----
-
-# 2.漏洞挖掘
+## 2.漏洞挖掘
 
 访问其80端口得到一个登录框，上方提示Show me your SQLI skills
 
-![](/media/TIM截图20190625111411.png)
+![](../.gitbook/assets/tim-jie-tu-20190625111411.png)
 
-## 2.1漏洞挖掘思路
+### 2.1漏洞挖掘思路
 
-```markdown
+```text
 1.SQL注入：首页提示注入，验证是否存在可利用的SQL注入
 2.爆破目录：使用dirb对站点目录进行爆破，寻找其他有价值的信息
 3.漏洞扫描：使用AWVS等扫描攻击对站点进行扫描
@@ -56,13 +54,13 @@ MAC Address: 00:0C:29:06:49:A0 (VMware)
 5.爆破SSH：目标服务器开放了22端口，可对22端口进行爆破
 ```
 
-## 2.2尝试使用SQL注入
+### 2.2尝试使用SQL注入
 
 猜测是SQL注入，使用常用payload逐一尝试，发现js弹窗提示Try again
 
 尝试使用sqlmap进行fuzz，但是没有成功，把他先放一放，先把目光转移到其他地方
 
-## 2.3爆破目录
+### 2.3爆破目录
 
 使用kali自带的目录爆破工具dirb对目录进行枚举
 
@@ -111,26 +109,24 @@ DOWNLOADED: 61374 - FOUND: 37
 得到/add、/c、/in、/panel、/show、/test、/phpmy等目录  
 访问192.168.1.7/test得到提示
 
-![](/media/TIM截图20190625153845.png)  
+![](../.gitbook/assets/tim-jie-tu-20190625153845.png)  
 分析得到存在一个任意文件下载漏洞
 
----
-
-# 3.任意文件下载漏洞利用
+## 3.任意文件下载漏洞利用
 
 （1）提交URL [http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空](http://192.168.1.7/test?file=/etc/passwd,依然提示file参数为空)  
 （2）尝试将file以post请求提交
 
-![](/media/TIM截图20190625162642.png)
+![](../.gitbook/assets/tim-jie-tu-20190625162642.png)
 
 成功下载到/etc/passwd文件  
 （3）利用任意文件下载漏洞下载add.php、c.php、in.php、show.php、panel.php等其他文件
 
-## 3.1审计代码
+### 3.1审计代码
 
 对已下载的代码进行审计
 
-### 3.1.1审计add.php
+#### 3.1.1审计add.php
 
 add.php是一个上传界面，源码如下
 
@@ -151,7 +147,7 @@ echo '<form  method="post" enctype="multipart/form-data">
 
 但是经过对add.php的源码审计发现，这个上传页面并不具有后台处理上传数据的功能，因此是不具有像服务器上传文件的功能的，这里应该是一个烟雾弹
 
-### 3.1.2审计c.php
+#### 3.1.2审计c.php
 
 c.php是数据库连接文件，源码如下
 
@@ -180,7 +176,7 @@ if (mysqli_connect_errno())
 数据库名：ica\_lab  
 但是这里有一个问题就是对服务器的端口扫描结果中mysql对应端口3306并未打开，怀疑mysql服务并未正常开启
 
-### 3.1.3审计/etc/passwd
+#### 3.1.3审计/etc/passwd
 
 ```go
 root:x:0:0:root:/root:/bin/bash
@@ -216,7 +212,7 @@ root
 ica  
 该线索可用于爆破
 
-### 3.1.4审计in.php
+#### 3.1.4审计in.php
 
 访问in.php得到的是phpinfo页面，从phpinfo页面获得如下信息
 
@@ -225,7 +221,7 @@ ica
 2.网站session存储的位置                #session.save_path
 ```
 
-### 3.1.5审计panel.php
+#### 3.1.5审计panel.php
 
 关键代码如下
 
@@ -344,15 +340,17 @@ if(isset($_POST['continue']))
 
 这段代码显然是存在本地文件包含漏洞的
 
-#### 文件包含利用思路
+**文件包含利用思路**
 
 **0x00session文件包含**  
 利用条件  
 1.session存放绝对路径已知  
 由于站点存在phpinfo，在session.savepath中可查看到session存放的绝对路径，这里为/var/lib/php5/  
 session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里为`sess_kvrlqilq5obgc8j8hqdkkenis6`  
-为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下  
-![](/media/session.png)  
+为了验证是否准确，使用开始发现的任意文件下载读取该session文件，结果如下
+
+![](../.gitbook/assets/session.png)
+
 可见文件存在，满足第一个条件  
 2.session变量可控  
 该站点session并未找到可控session方法，待日后讨论
@@ -362,7 +360,7 @@ session的文件名为sess\_+sessionid，sessionid可以通过F12获取，这里
 2.使用文件包含漏洞包含图片使之以PHP来执行  
 3.获取webshell
 
-### 3.1.6审计index.php
+#### 3.1.6审计index.php
 
 关键代码如下
 
@@ -390,7 +388,7 @@ $row = mysqli_fetch_assoc($result);
 
 从index.php我们可以看出，登录框所使用是的过滤方式是对POST提交上去的值做URL解码后使用str\_replace\(\)函数寻找单引号并将单引号替换成空，在这里开始考虑如何绕过限制进行注入
 
-### 3.1.7审计/var/www/phpmy/config.inc.php
+#### 3.1.7审计/var/www/phpmy/config.inc.php
 
 关键代码如下
 
@@ -418,7 +416,7 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 因为在使用dirb爆破出来的目录/phpmy/是phpmyadmin登陆界面，因此猜测其配置文件存放在默认目录  
 得到口令root：roottoor
 
-## 3.2审计总结
+### 3.2审计总结
 
 经过对任意文件下载所得到的各种信息，总结出以下几个漏洞利用点
 
@@ -429,9 +427,9 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 下面就对这几个漏洞利用点进行逐一分析利用
 
-# 4.暴力破解SSH
+## 4.暴力破解SSH
 
-## 4.1字典收集
+### 4.1字典收集
 
 一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半  
 从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息  
@@ -470,11 +468,14 @@ Root1
 .
 ```
 
-## 4.2使用hydra对SSH服务进行爆破
+### 4.2使用hydra对SSH服务进行爆破
+
 使用hydra对192.168.1.7 SSH服务进行爆破`hydra -L /root/桌面/wordlist.txt -P /root/桌面/wordlist.txt -t 6 ssh://192.168.1.7 #-t将线程调低为了保证稳定性`
 
-![](/media/hydra.png)
-得到服务器的root账户的口令，ssh连接为root权限
+![](../.gitbook/assets/hydra.png)
+
+得到服务器的root账户的口令root:roottoor，ssh连接为root权限
+
 ```go
 Your Hardware Enablement Stack (HWE) is supported until April 2017.
 
@@ -482,8 +483,12 @@ Last login: Wed Jun 26 02:47:23 2019 from 192.168.1.6
 root@indishell:~# whoami
 root
 ```
+
 至此完成挑战
 
-# 5.利用phpmyadmin
+## 5.利用phpmyadmin
+
 利用phpmyadmin可以查看其数据库信息，也可以利用SQL语句写入Webshell
-## 5.1对phpmyadmin进行口令猜解
+
+### 5.1对phpmyadmin进行口令猜解
+
