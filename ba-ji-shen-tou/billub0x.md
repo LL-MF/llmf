@@ -495,5 +495,6 @@ root
 口令root:roottoor、billu：b0x\_billu  
 使用口令billu：b0x\_billu登入成功
 ### 5.1使用phpmyadmin收集信息
+进入到phpmyadmin后，在ica\_lab数据库中找到了Web页面的验证信息biLLu：hEx_it
 
 
