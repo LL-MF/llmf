@@ -480,3 +480,4 @@ Last login: Wed Jun 26 02:47:23 2019 from 192.168.1.6
 root@indishell:~# whoami
 root
 ```
+至此完成挑战
