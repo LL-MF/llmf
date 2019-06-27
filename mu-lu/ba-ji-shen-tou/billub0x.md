@@ -439,3 +439,27 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 数据库名ica_lab
 将这些信息整合成list.txt后使用john相互组合形成字典
 `john --wordlist=list.txt --stdout --rules > wordlist.txt`
+得到wordlist.txt，部分字典内容如下
+```go
+root
+ica
+roottoor
+billu
+b0x_billu
+Root
+Ica
+Roottoor
+Billu
+roots
+icas
+roottoors
+billus
+root1
+ica1
+roottoor1
+billu1
+Root1
+.
+.
+.
+```
