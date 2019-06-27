@@ -497,6 +497,9 @@ root
 ### 5.2使用phpmyadmin收集信息
 进入到phpmyadmin后，在ica\_lab数据库中找到了Web页面的验证信息biLLu：hEx_it
 这里收集到的口令可以用来登入index.php页面
-### 5.3使用phpmyadmin写shell
+### 5.3使用phpmyadmin获取webshell
+当成功登入phpmyadmin后，会有许多方法来获取服务器的webshell
+#### 5.3.1利用phpmyadmin日志获取webshell
+
 
 
