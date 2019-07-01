@@ -499,7 +499,7 @@ root
 这里收集到的口令可以用来登入index.php页面
 ### 5.3使用phpmyadmin获取webshell(权限不足未成功)
 当成功登入phpmyadmin后，会有许多方法来获取服务器的webshell
-#### 5.3.1利用phpmyadmin日志获取webshell
+#### 5.3.1利用phpmyadmin日志获取webshell(权限不足未成功)
 发现登入的用户billu不具有root权限，方法无法使用
 #### 5.3.2利用phpmyadmin执行SQL语句获取webshell
 在phpmyadmin处使用SQL语句功能，执行
