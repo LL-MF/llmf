@@ -431,8 +431,10 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 ### 4.1字典收集
 
-一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半  
-从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息  
+一份好的字典直接决定到爆破的成功和效率，用于爆破的字典也不是一成不变的，针对性的生成字典将会事倍功半
+  
+从利用任意文件下载漏洞得到的/etc/passwd、/var/www/phpmy/config.inc.php、c.php可获得以下信息
+  
 **1. /etc/passwd**  
 可用以登陆SSH的用户名为root\|ica  
 **2. /var/www/phpmy/config.inc.php**  
